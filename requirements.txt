@@ -1,0 +1,24 @@
+# --- Database ---
+psycopg2-binary>=2.9
+python-dotenv>=1.0
+SQLAlchemy>=2.0          # recommended by pandas for read_sql; not imported directly
+
+# --- Data generation / loading ---
+pandas>=2.0
+Faker>=20.0
+
+# --- Analytics / ML ---
+# The saved artifacts in src/ml/artifacts were pickled with scikit-learn 1.6.1.
+# Newer scikit-learn versions can fail to unpickle them; if you upgrade,
+# retrain with `python -m src.ml.popularity_model`.
+scikit-learn>=1.6.1,<1.7
+joblib>=1.3
+numpy>=1.24
+
+# TensorFlow is required by src/ml/genre_classifier_tf.py AND by the Streamlit
+# app (dashboard/app.py imports it at start-up). Heavy install; check that your
+# Python version is supported by the TensorFlow release you install.
+tensorflow>=2.15
+
+# --- Dashboard ---
+streamlit>=1.30

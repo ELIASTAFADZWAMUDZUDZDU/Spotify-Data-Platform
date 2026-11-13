@@ -1,0 +1,26 @@
+# Credentials / environment
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.pytest_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.lnk
+
+# Power BI exports and temp files
+data/powerbi_export/
+~$*.pbix
